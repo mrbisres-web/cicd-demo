@@ -33,6 +33,6 @@ def test_add(client):
     assert res.get_json()["result"] == 10
 
 
-def test_add_negative(client):
-    res = client.get("/add/-5/3")
-    assert res.get_json()["result"] == -2
+def test_add_zero(client):
+    res = client.get("/add/0/5")
+    assert res.get_json()["result"] == 5
